@@ -1,7 +1,7 @@
 # Real-Time Social Media Streaming and Sentiments Analytics Using Apache Spark
 
 
-## 1. Project Overview
+## Project Overview
 
 This project explores real-time social media data streaming and hashtag analytics using Python, TCP sockets, and Apache Spark Structured Streaming.
 
@@ -13,7 +13,7 @@ In order to bypass direct access to the X (formerly Twitter) Developer API which
 
 The project demonstrates an approach to separating data ingestion from stream processing and provides a foundation for further work in real-time analytics, sentiment analysis, and data visualization.
 
-## 2. Research Objectives
+## Research Objectives
 
 The project explores the following objectives:
 
@@ -25,7 +25,7 @@ The project explores the following objectives:
 * Explore applications of real-time analytics for monitoring online conversations and customer responses.
 * Investigate opportunities for extending the pipeline to support sentiment analysis and visualization.
 
-## 3. System Architecture
+## System Architecture
 
 The project connects tweet ingestion with downstream stream processing through a TCP socket.
 
@@ -54,9 +54,9 @@ data |
 
 The supplied implementation uses a local TCP socket for streaming text into Spark. The original presentation also discusses Kafka and downstream storage, but these should not be interpreted as completed integrations unless supported by additional implementation files.
 
-## 4. Methodology
+## Methodology
 
-### 4.1 Data Ingestion
+### 1. Data Ingestion
 
 The original project explored obtaining tweets through the X Developer API using the Tweepy Python library.
 
@@ -66,7 +66,7 @@ Tweet data was fed directly into a manually established local TCP port. The Pyth
 
 This approach allowed the project to investigate the stream-processing component independently of direct API access.
 
-### 4.2 TCP-Based Data Transfer
+### 2. TCP-Based Data Transfer
 
 TCP socket communication provides the interface between the incoming tweet data and the processing component.
 
@@ -78,7 +78,7 @@ This local arrangement supports experimentation with streaming text without requ
 
 *Figure 2. Kafka Service layout with connected components.*
 
-### 4.3 Stream Processing
+### 3. Stream Processing
 
 Apache Spark Structured Streaming is used to read text from the TCP socket.
 
@@ -106,13 +106,14 @@ Lowercase normalization allows hashtags that differ only in capitalization to be
 
 For example, `#GreatComment` and `#greatcomment` would be normalized to the same representation.
 
-### 4.4 Aggregation and Output
+### 4. Aggregation and Output
 
 The Spark processing logic uses DataFrame transformations and aggregation to calculate hashtag frequencies.
 
 The intended output identifies hashtags and their occurrence counts, providing a foundation for examining which topics are appearing most frequently in the supplied stream.
 
 <!-- The supplied notebook also contains an attempted visualization section using Pandas, Matplotlib, and Seaborn. That section requires validation because it references objects not defined in the supplied implementation. -->
+
 
 ## 5. Results and Experimental Observations
 
@@ -132,7 +133,8 @@ The code defines the hashtag-extraction and aggregation logic. Actual performanc
 
 The sentiment-analysis examples in the original presentation establish the project's broader analytical direction; the supplied notebooks do not, by themselves, establish a complete, reproducible sentiment-classification pipeline. -->
 
-## 6. Technologies Used
+
+## Technologies Used
 
 | Technology                 | Application                                                  |
 | -------------------------- | ------------------------------------------------------------ |
@@ -146,7 +148,7 @@ The sentiment-analysis examples in the original presentation establish the proje
 | Matplotlib                 | Plotting                                                     |
 | Seaborn                    | Statistical visualization                                    |
 
-## 7. Repository Structure
+## Repository Structure
 
 ```text
 real-time-social-media-streaming-analytics/
@@ -176,7 +178,7 @@ real-time-social-media-streaming-analytics/
 
 The original academic presentation is preserved in the `paper/` directory. The notebooks document the experimental workflow, the Python source contains the listener implementation, and the `images/` directory contains the architecture and results diagrams.
 
-## 8. Setup and Execution
+## Setup and Execution
 
 ### Prerequisites
 
@@ -245,7 +247,7 @@ The supplied notebooks document the original implementation. Review and validate
 For development and testing, controlled sample text can be used to validate hashtag extraction and aggregation independently of external API access.
 
 
-## 9. Limitations
+## Limitations
 
 The available implementation and presentation these limitations:
 
@@ -254,7 +256,7 @@ The available implementation and presentation these limitations:
 
 These limitations provide a basis for further implementation, testing, and evaluation.
 
-## 10. Research Application and Future Work
+## Research Application and Future Work
 
 For further work, the following will be considered:
 
@@ -264,7 +266,7 @@ For further work, the following will be considered:
 * Investigate sentiment classification and other text-analysis techniques, with appropriate model evaluation, measure processing throughput, end-to-end latency, and reliability under controlled workloads.
 * Explore cloud-based storage and analytics services for scalable deployment.
 
-## 11. Conclusion
+## Conclusion
 
 This project explores a streaming analytics workflow for social media text, with a focus on hashtag extraction and frequency analysis using Python and Apache Spark Structured Streaming.
 
@@ -272,7 +274,7 @@ When direct X Developer API access required paid access, an alternative ingestio
 
 The work provides an academic foundation for further exploration of real-time data engineering, stream processing, social media analytics, and machine-learning-enabled analysis.
 
-## 12. Author
+## Author
 
 [**Samuel Darteh**](https://linkedin.com/in/sdartehpro)<br>
 *LinkedIn:* (https://linkedin.com/in/sdartehpro)
@@ -280,14 +282,16 @@ The work provides an academic foundation for further exploration of real-time da
 *Academic Affiliation:* [Michigan Technological University](https://mtu.edu) <br>
 *Project Type:* Big Data Analytics - Academic Research and Technical Implementation
 
-## 13. Original Academic Presentation
+## Original Academic Presentation
 
 The presentation documents the research motivation, streaming architecture, methodology, experimental context, sentiment-analysis examples, conclusions, and future-work directions.
 
 **Original presentation:** [`paper/Report_Paper-TwitterSentimentAnalysisUsingApacheSpark_2024.pdf`](paper/Report_Paper-TwitterSentimentAnalysisUsingApacheSpark_2024.pdf)
 
  
+## Acknowledgements
 
+I'm deeply grateful to [Dr. Yu Cai](https://www.linkedin.com/in/yu-cai-950015a/) for his guidance and contributions to the project.
 
 
 

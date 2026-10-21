@@ -274,19 +274,17 @@ The work provides an academic foundation for further exploration of real-time da
 
 ## 12. Author
 
-**[Samuel Darteh]**(https://linkedin.com/in/sdartehpro)
-[LinkedIn](https://linkedin.com/in/sdartehpro)
+[**Samuel Darteh**](https://linkedin.com/in/sdartehpro)<br>
+*LinkedIn:* (https://linkedin.com/in/sdartehpro)
 
-**Academic Affiliation:** Michigan Technological University 
-**Project Type:** Big Data Analytics - Academic Research and Technical Implementation
+*Academic Affiliation:* [Michigan Technological University](https://mtu.edu) <br>
+*Project Type:* Big Data Analytics - Academic Research and Technical Implementation
 
 ## 13. Original Academic Presentation
 
-The original project was developed as part of the requirements for Big Data Analytics at [Michigan Technological University](https://mtu.edu).
-
 The presentation documents the research motivation, streaming architecture, methodology, experimental context, sentiment-analysis examples, conclusions, and future-work directions.
 
-**Original presentation:** [`paper/SemProPresent.pdf`](paper/Report_Paper-TwitterSentimentAnalysisUsingApacheSpark_2024.pdf)
+**Original presentation:** [`paper/Report_Paper-TwitterSentimentAnalysisUsingApacheSpark_2024.pdf`](paper/Report_Paper-TwitterSentimentAnalysisUsingApacheSpark_2024.pdf)
 
  
 

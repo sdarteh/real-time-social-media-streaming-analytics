@@ -1,4 +1,4 @@
-# Real-Time Social Media Streaming and Hashtag Analytics Using Apache Spark
+# Real-Time Social Media Streaming and Sentiments Analytics Using Apache Spark
 
 
 ## 1. Project Overview
